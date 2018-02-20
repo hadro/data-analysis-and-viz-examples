@@ -8,12 +8,12 @@ Placeholder repo for some simple data viza examples I want hosted
 
 ## Interactive
 
-- [DPLA Hub clicks-per-item comparison, 2014-2017](/dpla_hubs/half_year_dpla_hubs.html)
+- [DPLA Hub clicks-per-item comparison, 2014-2017](https://hadro.github.io/viz-examples/dpla_hubs/half_year_dpla_hubs.html)
 - [HathiTrust Volumes and Usage by Year of Publication](https://hadro.github.io/hathi_analysis/percentage_years.html)
 
 ## Other viz
 
-[!["DPLA Hubs User Per Item"][dpla_use]](./images/dpla_hubs_use_per_item_six_months.gif)
+!["DPLA Hubs User Per Item"](./images/dpla_hubs_use_per_item_six_months_700.gif)
 [!["Pratt 654 Evalautions"][evaluations]](./images/evaluations.png)
 [!["HathiTrust ranked referrers"][hathi_referrers]](./images/hathitrust_referrers_bump_chart_solo.png)
 [!["text message analysis"][text_messages]](./images/Josh_text_messages.jpg)
@@ -30,4 +30,4 @@ Placeholder repo for some simple data viza examples I want hosted
 [nypl_in_hathi_tsne]: ./images/nypl_in_hathi_700.png "NYPL titles in HathiTrust TSNE"
 [building_inspector]: ./images/streets_8-48_700.png "Buildling Inspector Cloud lower Manhattan"
 [subway_library]: ./images/subway_library_public_domain_700.png "Public Domain works in Subway Library"
-[dpla_use]: ./images/dpla_hubs_use_per_item_six_months_700.png "DPLA Hubs User Per Item"
+[dpla_use]: ./images/dpla_hubs_use_per_item_six_months_700.gif "DPLA Hubs User Per Item"
