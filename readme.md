@@ -4,13 +4,14 @@ Placeholder repo for some simple data viza examples I want hosted
 
 [Pratt Institute Student Evaluations for my 654 Class](./images/evaluations.png)
 
-!["Pratt 654 Evalautions"][evaluations]
-!["HathiTrust Search Word Cloud"][hathi_cloud]
-!["HathiTrust ranked referrers"][hathi_referrers]
-!["text message analysis"][text_messages]
-!["NYPL titles in Hathitrust TSNE"][nypl_in_hathi_tsne]
-!["Building Inspector Cloud lower Manhattan"][building_inspector]
-!["Public Domain works in Subway Library][subway_library]
+[!["Pratt 654 Evalautions"][evaluations]](./images/evaluations.png)
+[!["HathiTrust ranked referrers"][hathi_referrers]](./images/hathitrust_referrers_bump_chart_solo.png)
+[!["text message analysis"][text_messages]](./images/Josh_text_messages.jpg)
+[!["HathiTrust Search Word Cloud"][hathi_cloud]](./images/hathi_search_queries.png)
+[!["Building Inspector Cloud lower Manhattan"][building_inspector]](./images/streets_8-48.png)
+[!["Public Domain works in Subway Library][subway_library]](./images/subway_library_public_domain.png)
+[!["NYPL titles in Hathitrust TSNE"][nypl_in_hathi_tsne]](./images/nypl_in_hathi.png)
+
 
 [evaluations]: ./images/evaluations_700.png "Pratt 654 Evaluations"
 [hathi_cloud]: ./images/hathi_search_queries_700.png "HathiTrust Search Word Cloud"
