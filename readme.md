@@ -13,7 +13,7 @@ Placeholder repo for some simple data viza examples I want hosted
 
 ## Other viz
 
-!["DPLA Hubs User Per Item"](./images/dpla_hubs_use_per_item_six_months_700.gif)
+[!["DPLA Hubs User Per Item"](./images/dpla_hubs_use_per_item_six_months_700.gif)](./images/dpla_hubs_use_per_item_six_months.gif)
 [!["Pratt 654 Evalautions"][evaluations]](./images/evaluations.png)
 [!["HathiTrust ranked referrers"][hathi_referrers]](./images/hathitrust_referrers_bump_chart_solo.png)
 [!["text message analysis"][text_messages]](./images/Josh_text_messages.jpg)
