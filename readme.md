@@ -8,7 +8,7 @@ Placeholder repo for some simple data viza examples I want hosted
 
 ## Interactive
 
-- [DPLA Hub clicks-per-item comparison, 2014-2017](https://hadro.github.io/viz-examples/dpla_hubs/half_year_dpla_hubs.html)
+- [DPLA Hub clicks-per-item comparison, 2014-2017](https://hadro.github.io/data-analysis-and-viz-examples/dpla_hubs/half_year_dpla_hubs.html)
 - [HathiTrust Volumes and Usage by Year of Publication](https://hadro.github.io/hathi_analysis/percentage_years.html)
 
 ## Other viz
