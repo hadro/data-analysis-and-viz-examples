@@ -9,13 +9,14 @@ Placeholder repo for some simple data viza examples I want hosted
 ## Interactive
 
 - [DPLA Hub clicks-per-item comparison, 2014-2017](https://hadro.github.io/data-analysis-and-viz-examples/dpla_hubs/half_year_dpla_hubs.html)
+[!["DPLA Hubs User Per Item"](./images/dpla_hubs_use_per_item_six_months_700.gif)](https://hadro.github.io/data-analysis-and-viz-examples/dpla_hubs/half_year_dpla_hubs.html)
 - [HathiTrust Volumes and Usage by Year of Publication](https://hadro.github.io/hathi_analysis/percentage_years.html)
+[!["HathiTrust by year"](./images/hathi_by_year.png)](https://hadro.github.io/data-analysis-and-viz-examples/dpla_hubs/half_year_dpla_hubs.html)
 - [NYPL Top Blog Posts Streamgraph](https://hadro.github.io/data-analysis-and-viz-examples/nypl_blogs/NYPL_blogs_streamgraph.html)
 [!["NYPL Top Blog posts"](./images/nypl_blogs.png)](https://hadro.github.io/data-analysis-and-viz-examples/nypl_blogs/NYPL_blogs_streamgraph.html)
 
 ## Other viz
 
-[!["DPLA Hubs User Per Item"](./images/dpla_hubs_use_per_item_six_months_700.gif)](./images/dpla_hubs_use_per_item_six_months.gif)
 [!["Pratt 654 Evalautions"][evaluations]](./images/evaluations.png)
 [!["HathiTrust ranked referrers"][hathi_referrers]](./images/hathitrust_referrers_bump_chart_solo.png)
 [!["text message analysis"][text_messages]](./images/Josh_text_messages.jpg)
