@@ -12,26 +12,26 @@ var dataUrl = 'output/';
 // Create global stores for image and atlas sizes
 var sizes = {
   image: {
-    width: 128,
-    height: 128
+    width: 32,
+    height: 32
   },
   atlas: {
     width: 2048,
     height: 2048,
-    cols: 2048 / 128,
-    rows: 2048 / 128
+    cols: 2048 / 32,
+    rows: 2048 / 32
   }
 }
 
-// Count of 128px and 256px atlas files to fetch
-var atlasCounts = { '128px': null, '256px': null }
+// Count of 32px and 64px atlas files to fetch
+var atlasCounts = { '32px': null, '64px': null }
 
 // Create a store for the load progress. Data structure:
 // {atlas0: percentLoaded, atlas1: percentLoaded}
 var loadProgress = {};
 
-// Create a store for the 128px and 256px atlas materials
-var materials = { 128: [], 256: [] }
+// Create a store for the 32px and 64px atlas materials
+var materials = { 32: [], 64: [] }
 
 // Many graphics cards only support 2**16 vertices per mesh,
 // and each image requires 4 distinct vertices
@@ -156,7 +156,7 @@ function get(url, handleSuccess) {
 /**
 * Load image positional data, and once it arrives parse
 * the image data, render the hotspots and conditionally
-* build the 128px geometries
+* build the 32px geometries
 **/
 
 function loadData() {
@@ -223,10 +223,10 @@ function parseImage(img) {
 /**
 * Generate all data for each image. Specifically, set:
 *   idx: the image index position in the list of all images
-*   width: the image's width within a 128px cell
-*   height: the image's height within a 128px cell
-*   xOffset: the image's left offset within a 128px cell
-*   yOffset: the image's top offset within a 128px cell
+*   width: the image's width within a 32px cell
+*   height: the image's height within a 32px cell
+*   xOffset: the image's left offset within a 32px cell
+*   yOffset: the image's top offset within a 32px cell
 *   pos:
 *     x: the x position of the image in the chart space
 *     y: the y position of the image in the chart space
@@ -380,12 +380,12 @@ function getImageMeshData(idx) {
 }
 
 /**
-* Load the 128px texture files
+* Load the 32px texture files
 **/
 
 function loadAtlasFiles() {
-  for (var i=0; i<atlasCounts['128px']; i++) {
-    var url = dataUrl + 'atlas_files/128px/atlas-' + i + '.jpg';
+  for (var i=0; i<atlasCounts['32px']; i++) {
+    var url = dataUrl + 'atlas_files/32px/atlas-' + i + '.jpg';
     textureLoader.load(url, handleTexture.bind(null, i),
       onProgress.bind(null, i))
   }
@@ -394,7 +394,7 @@ function loadAtlasFiles() {
 /**
 * XHR progress callback that updates the load progress meter
 *
-* @param {int} atlasIndex: the index of a 128px texture that
+* @param {int} atlasIndex: the index of a 32px texture that
 *   received the progress event
 * @param {obj} xhr: an XHR object from the texture's loader
 **/
@@ -407,7 +407,7 @@ function onProgress(atlasIndex, xhr) {
   }, 0);
   // Update the progress marker
   var loader = document.querySelector('#progress');
-  progress = sum / atlasCounts['128px'];
+  progress = sum / atlasCounts['32px'];
   loader.innerHTML = parseInt(progress * 100) + '%';
   if (progress === 1) startIfReady()
 }
@@ -416,24 +416,24 @@ function onProgress(atlasIndex, xhr) {
 * Create a material from a new texture and check if the
 * geometry is ready to be rendered
 *
-* @param {int} textureIndex: the index of a 128px texture
-*   among all 128px textures
+* @param {int} textureIndex: the index of a 32px texture
+*   among all 32px textures
 * @param {obj} texture: a three.js Texture
 **/
 
 function handleTexture(textureIndex, texture) {
   var material = new THREE.MeshBasicMaterial({ map: texture });
-  materials['128'][textureIndex] = material;
+  materials['32'][textureIndex] = material;
   startIfReady();
 }
 
 /**
-* Create 128px geometries if textures and img data loaded
+* Create 32px geometries if textures and img data loaded
 **/
 
 function startIfReady() {
-  var atlasCount = atlasCounts['128px'];
-  var loadedAtlasCount = Object.keys(materials['128']).length;
+  var atlasCount = atlasCounts['32px'];
+  var loadedAtlasCount = Object.keys(materials['32']).length;
   if (loadedAtlasCount === atlasCount &&
       Object.keys(imageData).length > 0 &&
       progress === 1) {
@@ -448,7 +448,7 @@ function startIfReady() {
 }
 
 /**
-* For each of the 128px textures, find the images in that
+* For each of the 32px textures, find the images in that
 * texture, add that image's vertices, faces, and uv positions
 * to the current geometry, and if we hit the maximum vertices
 * per geometry, add the geometry to the scene and continue.
@@ -469,7 +469,7 @@ function buildGeometry() {
     }
     var startMaterial = imageData[ meshImages[0] ].atlas.index;
     var endMaterial = imageData[ meshImages[j-1] ].atlas.index;
-    buildMesh(geometry, materials['128'].slice(startMaterial, endMaterial + 1));
+    buildMesh(geometry, materials['32'].slice(startMaterial, endMaterial + 1));
   }
   requestAnimationFrame(animate);
   removeLoaderScene();
@@ -615,17 +615,17 @@ function buildMesh(geometry, materials) {
 
 function loadLargeAtlasFiles() {
   sizes.image = {
-    width: 256,
-    height: 256
+    width: 64,
+    height: 64
   }
   sizes.atlas = {
     width: 2048,
     height: 2048,
-    cols: 2048 / 256,
-    rows: 2048 / 256
+    cols: 2048 / 64,
+    rows: 2048 / 64
   }
-  for (var i=0; i<atlasCounts['256px']; i++) {
-    var url = dataUrl + 'atlas_files/256px/atlas-' + i + '.jpg';
+  for (var i=0; i<atlasCounts['64px']; i++) {
+    var url = dataUrl + 'atlas_files/64px/atlas-' + i + '.jpg';
     textureLoader.load(url, handleLargeTexture.bind(null, i))
   }
 }
@@ -641,7 +641,7 @@ function loadLargeAtlasFiles() {
 
 function handleLargeTexture(atlasIndex, texture) {
   var material = new THREE.MeshBasicMaterial({ map: texture });
-  materials['256'][atlasIndex] = material;
+  materials['64'][atlasIndex] = material;
   updateImages(atlasIndex)
 }
 
@@ -663,7 +663,7 @@ function updateImages(atlasIndex) {
   // Identify the index position for the new atlas file
   var materialIndex = meshes[meshIndex].material.length;
   // Add the new atlas to its mesh
-  meshes[meshIndex].material.push( materials['256'][atlasIndex] )
+  meshes[meshIndex].material.push( materials['64'][atlasIndex] )
   // Request an update for this material
   meshes[meshIndex].material[materialIndex].needsUpdate = true;
   // Grab the geometry to which we added the new atlas
