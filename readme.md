@@ -10,8 +10,7 @@ Under the hood is a WebGL model of how the Inception Convolutional Neural Networ
 
 ## Large-scale analysis
 
-[!["HathiTrust Analysis plot
-montage"](./image/hathi_analysis_montage.jpg)](https://hadro.github.io/hathi_analysis/analysis.html)
+[!["HathiTrust Analysis plot montage"](./image/hathi_analysis_montage.jpg)](https://hadro.github.io/hathi_analysis/analysis.html)
 
 A large-scale analysis of metadata associated with the 16M+ volumes in the Hathitrust Digital Library repository matched against usage analytics from the PageTurner tool on hathitrust.org. This analysis is based on Google Analytics event triggers from January 2014 through mid-June 2018, the time that this version of the report was compiled.
 
