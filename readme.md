@@ -1,8 +1,19 @@
 Placeholder repo for some simple data viza examples I want hosted
 
+## PixPlot DPLA Fourth of July Images
 
+[!["PixPlot DPLA Fourth of July Images"](./images/pixplot_screencast_460.gif)](https://hadro.github.io/pix-plot-dpla/)
+
+A visualization of 7,384 "Fourth of July" (and related search) images from the Digital Public Library of America (DPLA), which aggregates cultural heritage metadata from thousands of institutions.
+
+Under the hood is a WebGL model of how the Inception Convolutional Neural Network perceives "relatedness" and then a mapping of the computed relationships into 3-dimensional space using UMAP algorithm such that similar images appear near each other.
 
 ## Large-scale analysis
+
+[!["HathiTrust Analysis plot
+montage"](./image/hathi_analysis_montage.jpg)](https://hadro.github.io/hathi_analysis/analysis.html)
+
+A large-scale analysis of metadata associated with the 16M+ volumes in the Hathitrust Digital Library repository matched against usage analytics from the PageTurner tool on hathitrust.org. This analysis is based on Google Analytics event triggers from January 2014 through mid-June 2018, the time that this version of the report was compiled.
 
 - [HathiTrust Usage Analytics and Metadata Analysis](https://hadro.github.io/hathi_analysis/analysis.html)
 

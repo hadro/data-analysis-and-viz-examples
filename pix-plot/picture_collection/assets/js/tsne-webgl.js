@@ -776,7 +776,17 @@ function addCanvasEventListeners() {
   canvas.addEventListener('mousemove', onMousemove, false)
   canvas.addEventListener('mousedown', onMousedown, false)
   canvas.addEventListener('mouseup', onMouseup, false)
+  canvas.addEventListener('dblclick', onDblclick, false)
 }
+
+
+function onDblclick(event) {
+  var hash = window.location.href.split('/#')[1];
+  if (hash) {
+  window.open('http://digitalcollections.nypl.org/items/image_id/'+hash);
+  }
+}
+
 
 /**
 * Set the current mouse coordinates {-1:1}
