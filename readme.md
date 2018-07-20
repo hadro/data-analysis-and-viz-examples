@@ -68,7 +68,7 @@ Faceted viz of the performance of public domain works in the Subway Library camp
 
 [!["NYPL titles in Hathitrust TSNE"][nypl_in_hathi_tsne]](./images/nypl_in_hathi.png)
 
-Experiment using doc2vec and using just volume titles to experiment with relatedness and potential recommendation engines.
+Experiment using doc2vec and volume metadata to experiment with relatedness and potential recommendation engines.
 
 
 [evaluations]: ./images/evaluations_700.png "Pratt 654 Evaluations"
