@@ -10,10 +10,17 @@
     <header class='header'>
       <img class='logo' src='assets/images/dhlab-logo.svg' alt='DHLab logo' />
       <div class='app-name'>PixPlot</div>
-      <div class='tagline'>Image fields in a Local Collection</div>
+      <div class='tagline'>Mapping NYPL's Picture Collection</div>
     </header>
     <div class='loader-scene'>
-      <p class='welcome'>This page visualizes a large image collection within an interactive WebGL scene. Each image was processed with an <a href='https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf' target='_blank'>Inception</a> Convolutional Neural Network, trained on <a href='http://image-net.org/challenges/LSVRC/2012/' target='_blank'>ImageNet 2012</a>, and projected into a two-dimensional manifold with the <a href='https://github.com/lmcinnes/umap' target='_blank'>UMAP</a> algorithm such that similar images appear proximate to one another.</p>
+      <p class="welcome">This page visualizes 34,259 of the digitized images in the <a href
+         ="https://digitalcollections.nypl.org/collections/wallach-division-picture-collection#/?tab=navigation">Wallach Division Picture Collection</a>.</p>
+        <p class="welcome">Under the hood is a WebGL model of how the <a href='https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf' target='_blank'>Inception</a> Convolutional Neural Network perceives "relatedness" and then a mapping of the computed relationships into 3-dimensional space using <a href='https://github.com/lmcinnes/umap' target='_blank'>UMAP</a> algorithm such that similar images appear near each other.</p>
+        <p class="welcome">Except for a few small modifications, this is based on the work and code published by the Yale Digital Humanities Labs in their <a href="https://github.com/yaledhlab/pix-plot">PixPlot repository</a>, which I learned about through an excellent <a href="https://vimeo.com/274922887">video presentation</a> from a Coalition for Networked Information (CNI) <a href="https://www.cni.org/topics/special-collections/neural-networks-machine-vision-for-the-visual-archive">project briefing</a>.</p>
+        <hr class="welcome">
+        <h3 class="welcome">Controls:</h3>
+        <p class="welcome">Click the clusters on the left to zoom to those areas, or use the mouse to browse on your own. Scroll to zoom in, and right-click to rotate.</p>
+        <p class="welcome">Clicking on an item will center the camera to that image, and double-clicking an item will take you to the record for that image in NYPL's Digital Collections platform.</p>
       <div class='loader-container'>
         <div class='loader-icon'>
           <div class='blocks'>
